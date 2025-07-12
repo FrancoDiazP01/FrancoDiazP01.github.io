@@ -1,0 +1,90 @@
+/* Estilos específicos para la página About Us */
+
+/* Importar la fuente League Spartan */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+/* Contenedor principal */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+}
+
+/* Secciones testimonial */
+.testimonial {
+    display: flex;
+    align-items: center;
+    margin: var(--spacing-xlarge) 0;
+    gap: var(--spacing-large);
+}
+
+/* Alineación izquierda */
+.align-left {
+    flex-direction: row;
+}
+
+.align-right {
+    flex-direction: row-reverse;
+}
+
+/* Nombre grande */
+.nombre.grande {
+    font-family: var(--font-family-primary);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+/* Texto descriptivo */
+.texto {
+    flex: 1;
+    max-width: 500px;
+}
+
+.texto p {
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-large);
+    line-height: 1.6;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-medium);
+    }
+
+    .align-left,
+    .align-right {
+        flex-direction: column;
+    }
+
+    .nombre.grande {
+        font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .texto {
+        max-width: 100%;
+    }
+
+    .texto p {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial {
+        padding: var(--spacing-medium) 0;
+    }
+
+    .nombre.grande {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+
+    .texto p {
+        font-size: var(--font-size-small);
+    }
+}

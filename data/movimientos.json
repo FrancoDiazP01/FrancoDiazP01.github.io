@@ -1,0 +1,73 @@
+{
+    "categorias": [
+        {
+            "id": "1",
+            "nombre": "Alimentos",
+            "tipo": "gasto",
+            "icono": "food"
+        },
+        {
+            "id": "2",
+            "nombre": "Transporte",
+            "tipo": "gasto",
+            "icono": "car"
+        },
+        {
+            "id": "3",
+            "nombre": "Salud",
+            "tipo": "gasto",
+            "icono": "medical"
+        },
+        {
+            "id": "4",
+            "nombre": "Salario",
+            "tipo": "ingreso",
+            "icono": "salary"
+        }
+    ],
+    "movimientos": [
+        {
+            "id": "1",
+            "categoria_id": "1",
+            "descripcion": "Supermercado",
+            "monto": 15000,
+            "fecha": "2025-07-12",
+            "tipo": "gasto",
+            "created_at": "2025-07-12T17:15:55-03:00"
+        },
+        {
+            "id": "2",
+            "categoria_id": "2",
+            "descripcion": "Combustible",
+            "monto": 6000,
+            "fecha": "2025-07-11",
+            "tipo": "gasto",
+            "created_at": "2025-07-11T17:15:55-03:00"
+        },
+        {
+            "id": "3",
+            "categoria_id": "4",
+            "descripcion": "Salario mensual",
+            "monto": 150000,
+            "fecha": "2025-07-10",
+            "tipo": "ingreso",
+            "created_at": "2025-07-10T17:15:55-03:00"
+        }
+    ],
+    "presupuestos": [
+        {
+            "id": "1",
+            "categoria_id": "1",
+            "monto_mensual": 30000,
+            "mes": "2025-07",
+            "created_at": "2025-07-12T17:15:55-03:00"
+        },
+        {
+            "id": "2",
+            "categoria_id": "2",
+            "monto_mensual": 15000,
+            "mes": "2025-07",
+            "created_at": "2025-07-12T17:15:55-03:00"
+        }
+    ]
+}

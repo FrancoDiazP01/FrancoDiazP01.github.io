@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tidetrack</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navigation">
+        <div class="nav-links">
+            <a href="./index.html" class="nav-link">home</a>
+            <a href="./about.html" class="nav-link">about us</a>
+            <a href="./login.html" class="nav-link active">login</a>
+            <a href="./user.html" class="nav-link">user</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="login-container">
+        <!-- Logo y enlace a home -->
+        <div class="login-logo">
+            <a href="./index.html" class="logo-link">
+            <a href="/" class="logo-link">
+                <h1 class="brand-name">tide</h1>
+                <h1 class="brand-name">track.</h1>
+            </a>
+        </div>
+
+        <!-- Formulario de login -->
+        <form class="login-form" action="/login" method="POST">
+            <!-- Campo Usuario -->
+            <div class="form-group">
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" name="username" class="form-input" placeholder="Usuario" required>
+                </div>
+            </div>
+
+            <!-- Campo Contraseña -->
+            <div class="form-group">
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" class="form-input" placeholder="Contraseña" required>
+                </div>
+            </div>
+
+            <!-- Botón de Submit -->
+            <button type="submit" class="login-button">
+                <span>Iniciar sesión</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </form>
+    </main>
+</body>
+</html>

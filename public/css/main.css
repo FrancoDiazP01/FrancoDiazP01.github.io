@@ -1,0 +1,163 @@
+/* Variables y estilos globales */
+
+/* Variables de colores */
+:root {
+    /* Colores principales */
+    --primary-color: #0A0D11;
+    --secondary-color: #888;
+    --background-color: #ffffff;
+    
+    /* Tipografía */
+    --font-family-primary: 'League Spartan', sans-serif;
+    --font-family-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Espaciado */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xlarge: 32px;
+    
+    /* Tamaños de fuente */
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 16px;
+    --font-size-xlarge: 20px;
+}
+
+/* Navegación */
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: var(--spacing-medium);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-medium);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-link {
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-medium);
+    font-weight: 500;
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+    background-color: rgba(10, 13, 17, 0.05);
+}
+
+.nav-link.active {
+    font-weight: 700;
+    color: var(--primary-color);
+    background-color: rgba(10, 13, 17, 0.05);
+}
+
+/* Responsive Design para Navegación */
+@media (max-width: 768px) {
+    .nav-links {
+        justify-content: center;
+        gap: var(--spacing-small);
+    }
+
+    .nav-link {
+        font-size: var(--font-size-small);
+        padding: var(--spacing-small);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-wrap: wrap;
+        gap: var(--spacing-xsmall);
+    }
+
+    .nav-link {
+        padding: var(--spacing-xsmall);
+    }
+}
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family-secondary);
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+/* Estilos para botones */
+.button {
+    padding: var(--spacing-medium) var(--spacing-large);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-family-secondary);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para contenedores */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-large);
+}
+
+/* Estilos para flexbox */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para responsive design */
+@media (max-width: 768px) {
+    :root {
+        --spacing-small: 4px;
+        --spacing-medium: 8px;
+        --spacing-large: 12px;
+        --spacing-xlarge: 16px;
+        
+        --font-size-small: 10px;
+        --font-size-medium: 12px;
+        --font-size-large: 14px;
+        --font-size-xlarge: 16px;
+    }
+}
