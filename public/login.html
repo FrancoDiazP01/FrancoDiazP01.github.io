@@ -6,29 +6,15 @@
     <title>Login - Tidetrack</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
-    <!-- Navegación -->
-    <nav class="navigation">
-        <div class="nav-links">
-            <a href="./index.html" class="nav-link">home</a>
-            <a href="./about.html" class="nav-link">about us</a>
-            <a href="./login.html" class="nav-link active">login</a>
-            <a href="./user.html" class="nav-link">user</a>
-        </div>
-    </nav>
-
     <!-- Contenido Principal -->
     <main class="login-container">
-        <!-- Logo y enlace a home -->
-        <div class="login-logo">
-            <a href="./index.html" class="logo-link">
-            <a href="/" class="logo-link">
-                <h1 class="brand-name">tide</h1>
-                <h1 class="brand-name">track.</h1>
-            </a>
-        </div>
+        <!-- Título de la página -->
+        <h1 class="login-title">Ingresar.</h1>
 
         <!-- Formulario de login -->
         <form class="login-form" action="/login" method="POST">
@@ -50,10 +36,19 @@
 
             <!-- Botón de Submit -->
             <button type="submit" class="login-button">
-                <span>Iniciar sesión</span>
-                <i class="fas fa-arrow-right"></i>
+                Iniciar sesión
             </button>
         </form>
+
+        <!-- Logo y enlace a home -->
+        <div class="login-logo">
+            <a href="./index.html" class="logo-link">
+                <div class="brand-names">
+                    <h1 class="brand-name">tide</h1>
+                    <h1 class="brand-name">track.</h1>
+                </div>
+            </a>
+        </div>
     </main>
 </body>
 </html>

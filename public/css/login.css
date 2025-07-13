@@ -1,31 +1,105 @@
-/* Estilos específicos para login */
+/* Login Page Styles */
+
+/* Importar la fuente League Spartan */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+/* Animación para el título */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Título animado */
+.login-title {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: var(--login-text-color);
+    margin: 0 0 2rem 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    animation: slideDown 0.8s ease-out forwards;
+}
+
+/* Título de la página */
+.login-title {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: var(--login-text-color);
+    margin: 0 0 2rem 0;
+    text-align: center;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+}
+
+/* Variables de colores específicas para login */
+:root {
+    --login-bg-color: #ffffff;
+    --login-text-color: #374151;
+    --login-border-radius: 16px;
+    --login-input-bg: rgba(0, 0, 0, 0.05);
+}
+
+/* Contenedor principal */
 .login-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-large);
+    background-color: var(--login-bg-color);
+    padding: 2rem;
 }
 
-.login-logo {
-    margin-bottom: var(--spacing-xlarge);
-    text-align: center;
-}
-
-.logo-link {
-    text-decoration: none;
-    color: var(--primary-color);
-}
-
+/* Formulario de login */
 .login-form {
     width: 100%;
-    max-width: 400px;
+    max-width: 320px;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-medium);
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--login-bg-color);
 }
 
+/* Responsive Design para el título */
+@media (max-width: 768px) {
+    .login-title {
+        font-size: 2.5rem;
+    }
+
+    .login-logo {
+        text-align: center;
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .brand-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-title {
+        font-size: 2rem;
+    }
+
+    .brand-name {
+        font-size: 1.75rem;
+    }
+}
+
+/* Campo de input con ícono */
 .form-group {
     position: relative;
 }
@@ -34,97 +108,136 @@
     position: relative;
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    padding: var(--spacing-medium);
-    transition: background-color 0.3s ease;
+    background: var(--login-input-bg);
+    border-radius: var(--login-border-radius);
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
 }
 
 .input-container:hover {
     background: rgba(0, 0, 0, 0.1);
 }
 
+/* Íconos */
 .input-container i {
-    color: var(--secondary-color);
-    margin-right: var(--spacing-medium);
+    color: var(--login-text-color);
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
 }
 
+/* Inputs */
 .form-input {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-large);
-    padding: var(--spacing-medium);
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+    padding: 0;
     border: none;
     background: transparent;
     width: 100%;
     outline: none;
-    color: var(--primary-color);
+    color: var(--login-text-color);
+    flex: 1;
 }
 
 .form-input::placeholder {
-    color: var(--secondary-color);
+    color: rgba(55, 65, 81, 0.7);
 }
 
+/* Botón de login */
 .login-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: var(--spacing-small);
-    padding: var(--spacing-medium);
-    background: var(--primary-color);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: #374151;
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: var(--login-border-radius);
     cursor: pointer;
-    font-family: var(--font-family-primary);
-    font-weight: 600;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
 }
 
 .login-button:hover {
-    background: darken(var(--primary-color), 10%);
-    transform: translateY(-2px);
+    background: #2d3748;
+    transform: translateY(-1px);
 }
 
-.login-button i {
-    transition: transform 0.3s ease;
+/* Logo y enlace */
+.login-logo {
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 320px;
+    padding: 1.5rem;
+    background: var(--login-bg-color);
+    text-align: center;
 }
 
-.login-button:hover i {
-    transform: translateX(5px);
+.logo-link {
+    text-decoration: none;
+    color: var(--login-text-color);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 800;
+    display: flex;
+    align-items: flex-start;
 }
 
+.brand-names {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.brand-name {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .login-container {
-        padding: var(--spacing-medium);
+        padding: 1rem;
     }
 
     .login-form {
-        width: 80%;
+        max-width: 100%;
+        padding: 1.5rem;
     }
 
     .form-input {
-        font-size: var(--font-size-medium);
+        font-size: 0.95rem;
     }
 
     .login-button {
-        padding: var(--spacing-small);
+        padding: 0.75rem 1.25rem;
+    }
+
+    .brand-name {
+        font-size: 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
-    .login-container {
-        padding: var(--spacing-small);
-    }
-
     .login-form {
-        width: 90%;
+        padding: 1.25rem;
     }
 
     .form-input {
-        font-size: var(--font-size-small);
+        font-size: 0.9rem;
     }
 
     .login-button {
-        padding: var(--spacing-xsmall);
+        padding: 0.65rem 1.25rem;
+    }
+
+    .login-logo {
+        padding: 0.75rem;
     }
 }
