@@ -1,90 +1,185 @@
-/* Estilos específicos para la página About Us */
+/* Estilos para la página About */
+:root {
+    --primary-color: #070E17;
+    --background-color: #FFFFFF;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --spacing-xlarge: 4rem;
+}
 
 /* Importar la fuente League Spartan */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
 
+/* Estilos base */
+body {
+    font-family: 'League Spartan', sans-serif;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 60px; /* Espacio para la navegación fija */
+}
+
 /* Contenedor principal */
-.about-container {
+.about-sections {
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-large);
+    padding: 40px 16px 60px; /* Reducido el padding superior e inferior */
+    box-sizing: border-box;
+    width: calc(100% - 32px);
 }
 
-/* Secciones testimonial */
-.testimonial {
+/* Secciones */
+.about-section {
+    width: 100%;
+    margin-bottom: 3rem; /* Reducido de 6rem a 3rem */
+    padding: 0 var(--spacing-medium);
+    position: relative;
+}
+
+.section-content {
+    max-width: 1000px; /* Reducido de 1200px a 1000px */
+    margin: 0 auto;
     display: flex;
     align-items: center;
-    margin: var(--spacing-xlarge) 0;
-    gap: var(--spacing-large);
+    min-height: 150px; /* Reducido de 200px a 150px */
+    gap: 1.5rem; /* Reducido de 2rem a 1.5rem */
 }
 
-/* Alineación izquierda */
-.align-left {
-    flex-direction: row;
-}
-
-.align-right {
-    flex-direction: row-reverse;
-}
-
-/* Nombre grande */
-.nombre.grande {
-    font-family: var(--font-family-primary);
-    font-size: clamp(3rem, 6vw, 5rem);
-    font-weight: 700;
-    color: var(--primary-color);
-    line-height: 1.2;
-}
-
-/* Texto descriptivo */
-.texto {
+/* Títulos */
+.about-title {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 140.7px;
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
     flex: 1;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+/* Posicionamiento de los títulos */
+#section-fran .about-title,
+#section-dima .about-title {
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#section-eze .about-title {
+    justify-content: flex-end;
+    text-align: right;
+}
+
+/* Descripciones */
+.about-description {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    width: 700px; /* Ancho fijo de 700px */
+    height: 168.84px; /* Altura fija de 168.84px */
+    max-width: 100%; /* Asegura que no se desborde en pantallas pequeñas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+/* Estilo específico para la sección Eze */
+#section-eze .section-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#section-eze .about-title {
+    order: 2;
+    text-align: right;
+    justify-content: flex-end;
+    height: auto;
+}
+
+/* Estilos para las secciones Fran y Dima */
+#section-fran .about-description,
+#section-dima .about-description {
+    margin-left: auto; /* Empuja la descripción a la derecha */
+    text-align: right;
+}
+
+/* Ajustes específicos para la sección Eze */
+#section-eze .about-description {
+    margin-right: auto; /* Empuja la descripción a la izquierda */
+    text-align: left;
+}
+
+#section-eze .about-description {
+    order: 1;
+    text-align: left;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el texto */
+}
+
+/* Asegurar que los títulos y descripciones ocupen el mismo ancho */
+.about-title, .about-description {
     max-width: 500px;
 }
 
-.texto p {
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-large);
-    line-height: 1.6;
-    color: var(--primary-color);
+/* Responsive */
+@media (max-width: 1024px) {
+    .section-content {
+        gap: 2rem;
+    }
+    
+    .about-title, 
+    .about-description {
+        min-width: 250px;
+    }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .testimonial {
+    .about-sections {
+        padding: 4rem var(--spacing-medium);
+    }
+    
+    .about-section {
+        margin-bottom: 4rem;
+        padding: 0;
+    }
+    
+    .section-content {
         flex-direction: column;
-        text-align: center;
-        gap: var(--spacing-medium);
+        gap: 1.5rem;
     }
-
-    .align-left,
-    .align-right {
+    
+    #section-eze .section-content {
         flex-direction: column;
     }
-
-    .nombre.grande {
-        font-size: clamp(2rem, 5vw, 3rem);
-    }
-
-    .texto {
+    
+    .about-title {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        text-align: left;
+        margin: 0 0 0.5rem 0;
+        min-width: 100%;
         max-width: 100%;
     }
-
-    .texto p {
-        font-size: var(--font-size-medium);
+    
+    .about-description {
+        font-size: 1rem;
+        text-align: left;
+        min-width: 100%;
+        max-width: 100%;
     }
-}
-
-@media (max-width: 480px) {
-    .testimonial {
-        padding: var(--spacing-medium) 0;
-    }
-
-    .nombre.grande {
-        font-size: clamp(1.5rem, 4vw, 2rem);
-    }
-
-    .texto p {
-        font-size: var(--font-size-small);
+    
+    .about-title, 
+    .about-description {
+        text-align: left;
     }
 }

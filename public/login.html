@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Tidetrack</title>
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/navigation.css">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="./js/main.js" defer></script>
 </head>
 <body>
+    <!-- Navegación -->
+    <nav class="nav-container">
+        <div class="nav-links">
+            <a href="./index.html" class="nav-link">home.</a>
+            <a href="./about.html" class="nav-link">about us</a>
+            <a href="./login.html" class="nav-link active">login</a>
+        </div>
+    </nav>
+
     <!-- Contenido Principal -->
-    <main class="login-container">
+    <main class="login-container" style="padding-top: 80px;">
         <!-- Título de la página -->
         <h1 class="login-title">Ingresar.</h1>
 
@@ -39,16 +49,6 @@
                 Iniciar sesión
             </button>
         </form>
-
-        <!-- Logo y enlace a home -->
-        <div class="login-logo">
-            <a href="./index.html" class="logo-link">
-                <div class="brand-names">
-                    <h1 class="brand-name">tide</h1>
-                    <h1 class="brand-name">track.</h1>
-                </div>
-            </a>
-        </div>
     </main>
 </body>
 </html>

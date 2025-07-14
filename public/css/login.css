@@ -3,31 +3,6 @@
 /* Importar la fuente League Spartan */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
 
-/* Animación para el título */
-@keyframes slideDown {
-    from {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Título animado */
-.login-title {
-    font-family: 'League Spartan', sans-serif;
-    font-weight: 800;
-    font-size: 3.5rem;
-    color: var(--login-text-color);
-    margin: 0 0 2rem 0;
-    text-align: center;
-    letter-spacing: 0.05em;
-    line-height: 1.1;
-    animation: slideDown 0.8s ease-out forwards;
-}
-
 /* Título de la página */
 .login-title {
     font-family: 'League Spartan', sans-serif;
